@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "105801289510",
+    "project_id": "downthought",
+    "storage_bucket": "downthought.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105801289510:android:3a0b7c0e0a391179613be7",
+        "android_client_info": {
+          "package_name": "com.example.notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105801289510-4vmifbnud4bkpp39a6sr97oclu7609op.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.notes",
+            "certificate_hash": "df7f08a0d997ab567bd1dddbbf26f42a51fd7aaf"
+          }
+        },
+        {
+          "client_id": "105801289510-kpm5ngg7hgqrqghj16tptg2dp5a6skad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPgAe4sprwYRGEjOU120P0VtEcgDtMtBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105801289510-kpm5ngg7hgqrqghj16tptg2dp5a6skad.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
