@@ -5,8 +5,7 @@ import 'package:notes/core/constant/sizes.dart';
 class AuthInkWell extends StatelessWidget {
   final String title;
   final void Function()? onTap;
-  final void Function()? onTapTwo;
-  const AuthInkWell({super.key, required this.title, this.onTap,this.onTapTwo});
+  const AuthInkWell({super.key, required this.title, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +23,8 @@ class AuthInkWell extends StatelessWidget {
            child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
              children: [
-              Text(title,style: const TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w500)),
-              const Icon(Icons.arrow_right_outlined,color: Colors.white,size: 40,)
+              Text(title,style: const TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w500)),
+              const Icon(Icons.arrow_right_outlined,color: Colors.white,size: 30,)
              ]),
          )
         )
@@ -70,7 +69,7 @@ class AuthChangePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-            margin: const EdgeInsets.symmetric(vertical: 35),
+            margin: EdgeInsets.symmetric(vertical: AppSize.thirtyfive),
              child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

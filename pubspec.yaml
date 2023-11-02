@@ -46,7 +46,6 @@ dependencies:
   flutter_datetime_picker: ^1.5.1
   firebase_analytics: ^10.1.6
   flutter_local_notifications: ^13.0.0
-  flutter_native_splash: ^2.2.19
   permission_handler: ^10.2.0
   path_provider: ^2.0.14
   flutter_sound: ^9.1.9
@@ -57,6 +56,23 @@ dependencies:
   speech_to_text: ^6.1.1
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.13.1"
+  flutter_lints: ^2.0.3
+  flutter_native_splash: ^2.0.1+1
+
+flutter_native_splash:
+  image: assets/mixitsplash.png
+  color: "#42a5f5"
+  android_gravity: fill  
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/applogo.png"
+  adaptive_icon_foreground: "assets/applogo.png"
+  min_sdk_android: 21
+
   flutter_test:
     sdk: flutter
 
@@ -66,10 +82,6 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-
-flutter_native_splash:  
-  image: assets/mixitlogo.png
-  android_gravity: fill
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
