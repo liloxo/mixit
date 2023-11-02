@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:notes/controller/pagescontroller/notescontroller/viewnote_controller.dart';
 import 'package:notes/core/components/textforms/addnotefield.dart';
 import 'package:notes/core/constant/colors.dart';
+import 'package:notes/core/constant/sizes.dart';
 
 class ViewNote extends StatelessWidget {
   
@@ -38,7 +39,7 @@ class ViewNote extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 15),
+                padding: EdgeInsets.only(right: AppSize.fifteen),
                 child: Text(controller.timestamp,style: const TextStyle(color: AppColors.grey),),
               )
             ],

@@ -6,6 +6,8 @@ import 'package:notes/core/components/textforms/textformfield.dart';
 import 'package:notes/core/constant/colors.dart';
 import 'package:notes/core/functions/validinput.dart';
 
+import '../../core/constant/sizes.dart';
+
 class LogIn extends StatelessWidget {
    const LogIn({super.key});
 
@@ -14,22 +16,22 @@ class LogIn extends StatelessWidget {
     Get.put(LoginController());
     return Scaffold(
       body : GetBuilder<LoginController>(
-                builder: (controller){
-                return controller.isloading 
-                  ?  const Center(
-                      child: CircularProgressIndicator(color: AppColors.primaryColor))
-                  : SingleChildScrollView(
+        builder: (controller){
+        return controller.isloading 
+          ?  const Center(
+              child: CircularProgressIndicator(backgroundColor: AppColors.primaryColor,color: AppColors.primaryColor,))
+          : SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: EdgeInsets.all(AppSize.twenty),
               child: Form(
                 key: controller.key,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                   const SizedBox(height: 150),
+                   SizedBox(height: AppSize.onefifty),
                    const Text('Login',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold)),
                    Container(
-                    margin: const EdgeInsets.symmetric(vertical: 20),
+                    margin: EdgeInsets.symmetric(vertical: AppSize.twenty),
                     child: const Text('Please login to continue',style: TextStyle(color: AppColors.grey,fontSize: 20,fontWeight: FontWeight.w400))
                     ),
                    CustomTextFormField(
@@ -52,7 +54,7 @@ class LogIn extends StatelessWidget {
                           controller.changeicon();
                         },
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 15),
+                          padding: EdgeInsets.only(top: AppSize.fifteen),
                           child: Text(
                             controller.isobscureText == true ? 'Show' : 'Hide',
                             ),
@@ -60,7 +62,7 @@ class LogIn extends StatelessWidget {
                         ),
                       ),
                    Container(
-                    margin: const EdgeInsets.symmetric(vertical: 15),
+                    margin: EdgeInsets.symmetric(vertical: AppSize.fifteen),
                       child:  Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [

@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
              ]
            );
           } else {
-           return const Center(child: CircularProgressIndicator(backgroundColor: AppColors.primaryColor));
+           return const Center(child: CircularProgressIndicator(backgroundColor: AppColors.primaryColor,color: AppColors.primaryColor,));
           }
         }
       )

@@ -25,7 +25,7 @@ class ToDo extends StatelessWidget {
           }
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
-              child: CircularProgressIndicator(color: AppColors.primaryColor));
+              child: CircularProgressIndicator(backgroundColor: AppColors.primaryColor,color: AppColors.primaryColor,));
           } else if (snapshot.data?.docs.isEmpty ?? true) {
             return const Center(
               child:  CustomEmptyColumn(

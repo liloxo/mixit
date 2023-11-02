@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:notes/controller/pagescontroller/todocontroller/addtodo_controller.dart';
 import 'package:notes/core/components/textforms/textformfield.dart';
 import 'package:notes/core/constant/colors.dart';
+import 'package:notes/core/constant/sizes.dart';
 
 class AddTodo extends StatelessWidget {
   const AddTodo({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class AddTodo extends StatelessWidget {
             context: context,
             builder: (context) {
               return Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  padding: EdgeInsets.symmetric(horizontal: AppSize.fifteen, vertical: 10),
                   color: AppColors.white,
                   height: double.infinity,
                   child: Form(

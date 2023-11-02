@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes/core/constant/colors.dart';
+import 'package:notes/core/constant/sizes.dart';
 
 class AuthInkWell extends StatelessWidget {
   final String title;
@@ -12,8 +13,8 @@ class AuthInkWell extends StatelessWidget {
     return Column(
       children: [
         Container(
-         width: 130,
-         height: 50,
+         width: AppSize.onethirty,
+         height: AppSize.fifty,
          decoration: BoxDecoration(
            borderRadius: BorderRadius.circular(20),
            color: AppColors.primaryColor
@@ -41,8 +42,8 @@ class AuthGuest extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
             margin: const EdgeInsets.only(left: 10) ,
-            height: 50,
-            width: 130,
+            height: AppSize.fifty,
+            width: AppSize.onethirty,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: AppColors.grey,

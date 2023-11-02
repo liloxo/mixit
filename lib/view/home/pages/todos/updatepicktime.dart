@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:notes/controller/pagescontroller/todocontroller/viewtodo_controller.dart';
 import 'package:notes/core/constant/colors.dart';
+import 'package:notes/core/constant/sizes.dart';
 
 class UpdatePickTimeTodo extends StatelessWidget {
   final void Function(DateTime) onDateTimeChanged;
@@ -13,12 +14,12 @@ class UpdatePickTimeTodo extends StatelessWidget {
   Widget build(BuildContext context) {
     ViewtodoController controller = Get.put(ViewtodoController());
     return SizedBox(
-           height: 320,
+           height: AppSize.threeforty,
            child: Column(
              children: [
                Expanded(
                  child: Padding(
-                   padding: const EdgeInsets.only(top: 25),
+                   padding: EdgeInsets.only(top: AppSize.twentyfive),
                    child: CupertinoDatePicker(
                      backgroundColor: AppColors.white,
                      minimumDate: DateTime.now(),
@@ -29,7 +30,7 @@ class UpdatePickTimeTodo extends StatelessWidget {
                ),
                Container(
                 color: AppColors.white,
-                padding: const EdgeInsets.only(bottom: 40,top: 30),
+                padding: EdgeInsets.only(bottom: AppSize.forty,top: AppSize.thirty),
                  child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [

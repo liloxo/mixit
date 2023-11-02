@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:notes/controller/pagescontroller/notescontroller/addnote_controller.dart';
 import 'package:notes/core/components/textforms/addnotefield.dart';
 import 'package:notes/core/constant/colors.dart';
+import 'package:notes/core/constant/sizes.dart';
 
 class AddNote extends StatelessWidget {
   const AddNote({super.key});
@@ -15,7 +16,7 @@ class AddNote extends StatelessWidget {
         key: controller.formkey,
         child: ListView(
         children: [
-          const SizedBox(height: 15),
+          SizedBox(height: AppSize.fifteen),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -35,7 +36,7 @@ class AddNote extends StatelessWidget {
               )
             ],
           ),
-          const SizedBox(height: 15),
+          SizedBox(height: AppSize.fifteen),
           CustomAddNoteFormField(
             mycontroller: controller.notetitle,
             autofocus: false,

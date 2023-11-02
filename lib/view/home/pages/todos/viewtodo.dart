@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:notes/controller/pagescontroller/todocontroller/viewtodo_controller.dart';
 import 'package:notes/core/components/textforms/addnotefield.dart';
 import 'package:notes/core/constant/colors.dart';
+import 'package:notes/core/constant/sizes.dart';
 
 class ViewTodo extends StatelessWidget {
   const ViewTodo({Key? key}) : super(key: key);
@@ -39,12 +40,12 @@ class ViewTodo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 15),
+                padding: EdgeInsets.only(right: AppSize.fifteen),
                 child: Text(controller.timestamp.toString(),style: const TextStyle(color: AppColors.grey),),
               )
             ]
           ),
-            const SizedBox(height: 30),
+            SizedBox(height: AppSize.thirty),
             Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
               child: Container(
@@ -68,11 +69,11 @@ class ViewTodo extends StatelessWidget {
                 )
               )
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: AppSize.twenty),
             Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
               child: Container(
-                height: 60,
+                height: AppSize.sixty,
                 padding: const EdgeInsets.only(right: 10),
                 child: Center(
                   child: Row(

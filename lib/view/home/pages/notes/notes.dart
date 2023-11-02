@@ -5,6 +5,7 @@ import 'package:notes/controller/home/homepage_controller.dart';
 import 'package:notes/controller/pagescontroller/notescontroller/notes_controller.dart';
 import 'package:notes/core/components/slidable/slidable.dart';
 import 'package:notes/core/constant/colors.dart';
+import 'package:notes/core/constant/sizes.dart';
 import 'package:notes/view/widget/emptycolumn/customemptycolumn.dart';
 
 class Notes extends StatelessWidget {
@@ -31,7 +32,7 @@ class Notes extends StatelessWidget {
           }
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
-              child: CircularProgressIndicator(color: AppColors.primaryColor));
+              child: CircularProgressIndicator(backgroundColor: AppColors.primaryColor,color: AppColors.primaryColor,));
           } else if (snapshot.data?.docs.isEmpty ?? true) {
             return const Center(
                 child:  CustomEmptyColumn(
@@ -66,9 +67,9 @@ class Notes extends StatelessWidget {
                                 },
                                 child: Container(
                                 padding: const EdgeInsets.only(right: 10),
-                                height: 80,
+                                height: AppSize.eighty,
                                 child: Padding(
-                                  padding: const EdgeInsets.only(top: 10,left: 15),
+                                  padding: EdgeInsets.only(top: 10,left: AppSize.fifteen),
                                   child: Column(
                                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                                         children: [

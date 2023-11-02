@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:notes/core/constant/colors.dart';
 
+import '../../constant/sizes.dart';
+
 class CustomTextFormField extends StatelessWidget {
   final TextEditingController? mycontroller;
   final bool? isobscureText;
@@ -27,7 +29,7 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 20),
+      margin: EdgeInsets.symmetric(vertical: AppSize.twenty),
       child: TextFormField(
         controller: mycontroller,
         validator: valid,
@@ -44,7 +46,7 @@ class CustomTextFormField extends StatelessWidget {
               color: AppColors.primaryColor
             )
           ),
-          contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+          contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: AppSize.twenty),
           label: Text(labeltext,style: const TextStyle(color: AppColors.grey,fontSize: 20,fontWeight: FontWeight.w500)),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           hintText: hintText,

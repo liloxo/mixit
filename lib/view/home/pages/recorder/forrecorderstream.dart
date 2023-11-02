@@ -7,6 +7,8 @@ import 'package:notes/core/components/slidable/slidable.dart';
 import 'package:notes/core/constant/colors.dart';
 import 'package:notes/view/widget/emptycolumn/customemptycolumn.dart';
 
+import '../../../../core/constant/sizes.dart';
+
 class Recorder extends StatelessWidget {
   const Recorder({Key? key, }) : super(key: key);
 
@@ -30,7 +32,7 @@ class Recorder extends StatelessWidget {
           }
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
-              child: CircularProgressIndicator(color: AppColors.primaryColor));
+              child: CircularProgressIndicator(backgroundColor: AppColors.primaryColor,color: AppColors.primaryColor,));
           } else if (snapshot.data?.docs.isEmpty ?? true) {
             return const Center(
               child:  CustomEmptyColumn(
@@ -64,8 +66,8 @@ class Recorder extends StatelessWidget {
                                    controller.editrecorder(snapshot.data.docs[i].id, snapshot.data.docs[i]['title']);
                                   },
                                   child: Container(
-                                    height: isSelected ? 150 : 100,
-                                    padding: const EdgeInsets.only(right: 10,top: 20,left: 15),
+                                    height: isSelected ? AppSize.onefifty : AppSize.hundred,
+                                    padding: EdgeInsets.only(right: 10,top: AppSize.twenty,left: AppSize.fifteen),
                                     child: Column(
                                       children: [
                                         Row(

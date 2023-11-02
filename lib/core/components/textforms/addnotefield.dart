@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:notes/core/constant/colors.dart';
 
+import '../../constant/sizes.dart';
+
 class CustomAddNoteFormField extends StatelessWidget {
   final TextEditingController? mycontroller;
   final String? Function(String?)? valid;
@@ -15,7 +17,7 @@ class CustomAddNoteFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(horizontal: AppSize.twenty),
       child: TextFormField(
         maxLines: maxLines,
         style:  TextStyle(fontSize: titleornote ? 27 : 20,fontWeight: titleornote ? FontWeight.bold : FontWeight.w300),

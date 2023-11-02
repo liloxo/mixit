@@ -85,7 +85,7 @@ class AddRecorderController extends GetxController {
   }
 
   Future cancelRecording() async {
-    if (!isready) return;
+    if (!isready) {Get.back();}
     if(saveorcancel ==true){
       timer.cancel();
     await recorder.stopRecorder();

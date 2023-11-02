@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:notes/controller/pagescontroller/todocontroller/addtodo_controller.dart';
 import 'package:notes/core/constant/colors.dart';
+import 'package:notes/core/constant/sizes.dart';
 
 class PickTimeTodo extends StatelessWidget {
   final void Function(DateTime) onDateTimeChanged;
@@ -13,34 +14,34 @@ class PickTimeTodo extends StatelessWidget {
   Widget build(BuildContext context) {
     AddTodoController controller = Get.put(AddTodoController());
     return SizedBox(
-           height: 320,
-           child: Column(
+      height: AppSize.threeforty,
+      child: Column(
+        children: [
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(top: AppSize.twentyfive),
+              child: CupertinoDatePicker(
+                backgroundColor: AppColors.white,
+                minimumDate: DateTime.now(),
+                initialDateTime: DateTime.now(),
+                mode: CupertinoDatePickerMode.dateAndTime,
+                onDateTimeChanged: onDateTimeChanged)
+            )
+          ),
+          Container(
+           color: AppColors.white,
+           padding: EdgeInsets.only(bottom: AppSize.forty,top: AppSize.thirty),
+            child: Row(
+             mainAxisAlignment: MainAxisAlignment.spaceAround,
              children: [
-               Expanded(
-                 child: Padding(
-                   padding: const EdgeInsets.only(top: 25),
-                   child: CupertinoDatePicker(
-                     backgroundColor: AppColors.white,
-                     minimumDate: DateTime.now(),
-                     initialDateTime: DateTime.now(),
-                     mode: CupertinoDatePickerMode.dateAndTime,
-                     onDateTimeChanged: onDateTimeChanged)
-                 )
-               ),
-               Container(
-                color: AppColors.white,
-                padding: const EdgeInsets.only(bottom: 40,top: 30),
-                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                  MaterialButton(onPressed: (){Get.back();},color: AppColors.white,child: const Text('Cancel',style: TextStyle(color: AppColors.primaryColor,fontSize: 17.5))),
-                  MaterialButton(onPressed: (){
-                    Get.back(result: controller.selectedTime);
-                  },color: AppColors.white , child: const Text('Confirm',style: TextStyle(color: AppColors.primaryColor,fontSize: 17.5)))
-                 ])
-               )
-             ]
-           )
-         );
+             MaterialButton(onPressed: (){Get.back();},color: AppColors.white,child: const Text('Cancel',style: TextStyle(color: AppColors.primaryColor,fontSize: 17.5))),
+             MaterialButton(onPressed: (){
+               Get.back(result: controller.selectedTime);
+             },color: AppColors.white , child: const Text('Confirm',style: TextStyle(color: AppColors.primaryColor,fontSize: 17.5)))
+            ])
+          )
+        ]
+      )
+    );
   }
 }
